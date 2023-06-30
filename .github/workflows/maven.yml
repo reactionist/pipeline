@@ -23,8 +23,8 @@ jobs:
     - name: SonarCloud analysis
       uses: SonarSource/sonarcloud-github-action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.REACTIONIST }}  
-        SONAR_TOKEN: ${{ secrets.6ecf2295f819e72bccdee87614e8f8b9a55c0b50 }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     
     # Unit tests and building with Maven
     - name: Build with Maven
